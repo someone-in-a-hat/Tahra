@@ -1,18 +1,28 @@
 header {
-    font-family: "Cairo Play";
+    font-size:larger;
     background: rgb(43, 43, 43);
     text-align: center;
-    font-style:italic;
+}
+
+p {
+    color:white;
+    font-size:larger;
+    text-align:right;
 }
 body {
     background-image:linear-gradient(to left, rgb(39, 39, 39), rgb(37, 36, 36));
     /* background-image: conic-gradient(from 0deg, grey, black) */
     opacity:0;
-    animation: fadein 2s forwards
+    animation: fadein 1s forwards;
+    
 }
 .title{
     color: red; font-weight: 900;
     font-size: 40px;
+    font-family: "Cairo Play";
+    background: rgb(43, 43, 43);
+    text-align: center;
+    font-style:italic;
 }
 
 @keyframes fadein {
@@ -22,4 +32,87 @@ body {
     to {
         opacity: 1;
     }
+}
+
+.sitenav a{
+    font-family: "Alexandria";
+    color:green;
+    margin: 30px;
+    font-size: 25px;
+}
+
+.intro, .ai-warning, .rumors {
+    background: #2f2f2f;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.rumor-card {
+    background: #3a3a3a;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border-right: 5px solid red;
+}
+
+h2 {
+    font-family: "Alexandria";
+    color: #ff4d4d;
+    font-size: 28px;
+}
+
+h3 {
+    font-family: "Alexandria";
+    color: #66ff66;
+}
+.red {
+    color:#ff4d4d;
+}
+
+.rumor-card p {
+    color: #e0e0e0;
+    font-size: 20px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    display: block;
+    margin: 15px auto; 
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background: #2f2f2f;
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+
+.login-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.login-container button {
+    padding: 10px 20px;
+    margin-top: 15px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 10px;
+    color: yellow;
 }
