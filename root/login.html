@@ -20,9 +20,21 @@
         </header>
         <div class="login-container" id="login-container">
             <h2>تسجيل الدخول</h2>
-            <button type="button">تسجيل الدخول باستخدام حساب جوجل</button>
+            <button type="button" class="google">تسجيل الدخول باستخدام حساب جوجل</button>
             <p id="message"></p>
           </div>
-        <script src="dist/bundle.js"></script>
+          <form class="login-container" id="send">
+            <input type="text" id="username" class="input-field" placeholder="Enter your username"autocomplete="off">
+            <input type="text" id="tstmsg" class="input-field" placeholder="Enter your message" autocomplete="off">
+            <button type="submit" class="tstsend">Send</button>
+            <p id="result">ee</p>
+        </form>
+
+        <form class="login-container" id="search">
+            <input type="text" id="searchmsg" class="input-field" placeholder="Search for message" autocomplete="off">
+            <button type="submit" class="tstsend">Search</button>
+            <p id="displaymsg"></p>
+        </form>
+        <script src="dist/login.js"></script>
     </body>
 </html>

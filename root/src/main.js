@@ -21,24 +21,3 @@ const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('button').addEventListener('click', function(e) {
-    e.preventDefault();
-
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        const user = result.user;
-        console.log(user);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.email;
-        const credential = error.credential;
-        console.error(errorMessage);
-      });
-  });
-});

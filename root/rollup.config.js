@@ -12,6 +12,12 @@ export default {
     // Optional: Creates a sourcemap for easier debugging in the browser
     sourcemap: 'inline'
   },
+  input: 'src/login.js',
+  output: {
+    file: 'dist/login.js',
+    format: 'iife',
+    sourcemap: 'inline'
+  },
   plugins: [
     // This plugin allows Rollup to find modules installed via npm (like Firebase)
     nodeResolve()
