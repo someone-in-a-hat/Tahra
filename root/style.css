@@ -94,21 +94,18 @@ h3 {
     text-align: center;
 }
 
-.login-container input {
+.login-container button {
+    text-decoration: underline;
+    text-underline-position: below;
+    color: #e0e0e0;
+    font-size:28px;
+    font-style: bold;
+    background-color: transparent;
     width: 90%;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
     border: none;
-}
-
-.login-container button {
-    padding: 10px 20px;
-    margin-top: 15px;
-    background: red;
-    color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
 

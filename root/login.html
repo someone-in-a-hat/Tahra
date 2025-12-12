@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap');
@@ -17,19 +18,11 @@
                 <a href="test5.html">صفحه 5</a>
             </div>
         </header>
-        <div class="login-container">
+        <div class="login-container" id="login-container">
             <h2>تسجيل الدخول</h2>
-            <form id="loginForm">
-                <label for="email">:البريد الإلكتروني:</label>
-                <input type="email" id="email" required><br>
-                
-                <label for="password">:كلمة المرور</label>
-                <input type="password" id="password" required>
-                
-                <button type="submit">دخول</button>
-            </form>
+            <button type="button">تسجيل الدخول باستخدام حساب جوجل</button>
             <p id="message"></p>
-        </div>
+          </div>
         <script src="dist/bundle.js"></script>
     </body>
 </html>
