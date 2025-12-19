@@ -85,7 +85,7 @@ h3 {
     box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
-.login-container {
+.login-container, .search{
     max-width: 400px;
     margin: 100px auto;
     background: #2f2f2f;
@@ -133,27 +133,4 @@ h3 {
 .login-container .input-field:focus {
     border: 2px solid #ff4d4d;
     box-shadow: 0 0 12px #ff4d4d66;
-}
-
-.tstsend {
-    width: 90%;
-    padding: 12px 15px;
-    margin: 10px 0;
-    font-size: 20px;
-    font-family: "Alexandria";
-    color: #e0e0e0;
-
-    background: #3a3a3a;
-    border: 2px solid #ff4d4d30;
-    border-radius: 8px;
-
-    outline: none;
-    transition: border 0.2s, box-shadow 0.2s;
-
-    cursor:pointer;
-}
-
-.tstsend:hover {
-    width: 93%;
-    border: 2px dotted #ff4d4d30;
 }
