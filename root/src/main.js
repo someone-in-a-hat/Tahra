@@ -2,8 +2,8 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
-import { collection, addDoc } from "firebase/firestore";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getDoc, doc } from "firebase/firestore";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged } from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCFRsEOAv57VH2SvyXcxOvaHYtobeb5ihQ",
@@ -21,3 +21,27 @@ const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
+
+const nameEl = document.getElementById("userName");
+const avatarEl = document.getElementById("userAvatar");
+
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
+    const snap = await getDoc(doc(db, "users", user.uid));
+    if (snap.exists() && snap.data().displayName) {
+      nameEl.textContent = "مرحبا " + snap.data().displayName;
+    }
+    if (user.photoURL) {
+      avatarEl.src = user.photoURL;
+      avatarEl.style.display = "block";
+    }
+  } else {
+    nameEl.textContent = "لم يتم تسجيل الدخول";
+    avatarEl.style.display = "none";
+  }
+});
+
+
+avatarEl.addEventListener("click", () => {
+    window.location.href = `profile.html?id=${auth.currentUser.uid}`;
+  });

@@ -38,9 +38,18 @@ export default [
     plugins: [nodeResolve()]
   },
   {
-    input: 'src/mock.js',
+    input: 'src/profile.js',
     output: {
-      file: 'dist/mock.js',
+      file: 'dist/profile.js',
+      format: 'iife',
+      sourcemap: 'inline'
+    },
+    plugins: [nodeResolve()]
+  },
+  {
+    input: 'src/quick.js',
+    output: {
+      file: 'dist/quick.js',
       format: 'iife',
       sourcemap: 'inline'
     },

@@ -1,3 +1,27 @@
+.user-info {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: "Alexandria";
+    color: #e0e0e0;
+    font-size: 20px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #66ff66;
+    display: none;
+}
+
 header {
     font-size:larger;
     background: rgb(43, 43, 43);
@@ -49,13 +73,19 @@ body {
     animation: fadein 1s forwards;
     
 }
-.title{
-    color: red; font-weight: 900;
-    font-size: 40px;
-    font-family: "Cairo Play";
+.title {
     background: rgb(43, 43, 43);
     text-align: center;
-    font-style:italic;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.logo {
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 @keyframes fadein {
@@ -103,6 +133,13 @@ body {
     color: #66ff66;
     text-decoration: none;
     font-size: 24px;
+}
+
+#articles .article-card p a {
+    font-family: "Alexandria";
+    color: #ff4d4d;
+    text-decoration: none;
+    font-size: 12px;
 }
 
 #articles .article-card h3 a:hover {

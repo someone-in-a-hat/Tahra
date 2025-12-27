@@ -60,11 +60,12 @@ const PAGE_SIZE = 10;
         const article = doc.data();
         const date = article.date.toDate();
         const formattedDate = date.toLocaleDateString();
+        console.log(article.author_id)
         document.getElementById("articles").innerHTML += `
             <div class="article-card">
                 <h3><a href="article.html?id=${doc.id}">${article.title}</a></h3>
                 <p>${formattedDate}</p>
-                <p>تأليف ${article.author}</p>
+                <p><a href="profile.html?id=${article.author_id}">تأليف ${article.author}</a></p>
             </div>
         `;
     });

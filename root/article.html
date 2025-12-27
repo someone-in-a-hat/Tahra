@@ -10,13 +10,19 @@
     </head>
     <body>
         <header>
-            <h1 class="title">لا تْمرّر معلومة خطأ</h1>
+            <h1 class="title">
+                <img src="logo.png" alt="تحرى logo" class="logo">
+            </h1>
             <div class="sitenav">
                 <a href="login.html">تسجيل الدخول</a>
                 <a href="index.html">الصفحه الرئيسيه</a>
                 <a href="articles.html">المقالات</a>
                 <a href="test4.html">صفحه 4</a>
                 <a href="test5.html">صفحه 5</a>
+            </div>
+            <div class="user-info">
+                <img id="userAvatar" />
+                <span id="userName"></span>
             </div>
         </header>
         <h1 id="title"></h1>
@@ -25,5 +31,6 @@
         <ul id="sources"></ul>
         
         <script type="module" src="dist/article.js"></script>
+        <script type="module" src="dist/bundle.js"></script>
     </body>
 </html>
