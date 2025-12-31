@@ -1,0 +1,38 @@
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap');
+        </style>
+        <title>تحري | تسجيل الدخول</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1 class="title">
+                <img src="logo.png" alt="تحرى logo" class="logo">
+            </h1>
+            <div class="sitenav">
+                <a href="index.html">الصفحه الرئيسيه</a>
+                <a href="articles.html">المقالات</a>
+                <a href="quickfacts.html">حقائق سريعة</a>
+                <a href="tutorial.html">كيف اراجع المصادر ؟</a>
+            </div>
+            <div class="user-info">
+                <img id="userAvatar" />
+                <span id="userName"></span>
+            </div>
+        </header>
+        <div class="login-container" id="login-container">
+            <h2>تسجيل الدخول</h2>
+            <img src="google.png">
+            <button type="button" class="google">تسجيل الدخول باستخدام حساب جوجل</button>
+            <p id="message"></p>
+            <p>(تسجيل الدخول يتيح لك إمكانية اقتراح مقالات و حقائق سريعة)</p>
+        </div>
+        
+        <script src="dist/login.js"></script>
+        <script type="module" src="dist/bundle.js"></script>
+    </body>
+</html>

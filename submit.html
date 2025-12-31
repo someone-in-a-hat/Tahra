@@ -1,0 +1,86 @@
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap');
+        </style>
+        <title>تحري | ارسال محتوي</title>
+        <link rel="stylesheet" href="styleArticle.css">
+    </head>
+    <body>
+        <header>
+            <h1 class="title">
+                <img src="logo.png" alt="تحرى logo" class="logo">
+            </h1>
+            <div class="sitenav">
+                <a href="login.html">تسجيل الدخول</a>
+                <a href="index.html">الصفحه الرئيسيه</a>
+                <a href="articles.html">المقالات</a>
+                <a href="quickfacts.html">حقائق سريعة</a>
+                <a href="tutorial.html">كيف اراجع المصادر ؟</a>
+            </div>
+            <div class="user-info">
+                <img id="userAvatar" />
+                <span id="userName"></span>
+            </div>
+        </header>
+        <main>
+            <h2>إرسال محتوى جديد</h2>
+            <div class="notice">
+            <p>يرجي مراجعة</p>
+            <a href="tutorial.html">هذه الصفحة</a>
+            <p>قبل القيام بإرسال اي محتوي</p>
+            </div>
+            <label>
+                نوع المحتوى:
+                <select id="contentType">
+                    <option value="article">مقال</option>
+                    <option value="quickfact">حقيقة سريعة</option>
+                </select>
+            </label>
+        
+            <div id="articleForm">
+                <label>عنوان المقال</label>
+                <input type="text" id="articleTitle">
+        
+                <label>محتوى المقال</label>
+                <textarea id="articleContent"></textarea>
+        
+                <label>المصادر (كل مصدر في سطر)</label>
+                <textarea id="articleSources"></textarea>
+            </div>
+        
+            <div id="quickFactForm" hidden>
+                <label>الادعاء</label>
+                <input type="text" id="factClaim">
+        
+                <label>التصحيح</label>
+                <textarea id="factCorrection"></textarea>
+        
+                <label>الدقة</label>
+                <select id="factAccuracy">
+                    <option value="خاطئ">خاطئ</option>
+                    <option value="مضلل">مضلل</option>
+                    <option value="غير مكتمل">غير مكتمل</option>
+                </select>
+        
+                <label>التصنيف</label>
+                <input type="text" id="factTag">
+        
+                <label>المصدر</label>
+                <input type="text" id="factSource">
+            </div>
+        
+            <button id="submitContentBtn">إرسال</button>
+            <p id="submitStatus"></p>
+        </main>
+        <section id="mySubmissions">
+            <h2>مساهماتي السابقة</h2>
+            <div id="submissionList">
+                <p>جاري تحميل مساهماتك...</p>
+            </div>
+        </section>
+        <script type="module" src="dist/submit.js"></script>
+        <script type="module" src="dist/bundle.js"></script>
+    </body>
