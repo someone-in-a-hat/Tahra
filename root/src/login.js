@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const credential = GoogleAuthProvider.credentialFromResult(result);
           const token = credential.accessToken;
           const user = result.user;
-          document.getElementById("message").textContent = "Success !";
+          document.getElementById("message").textContent = "تم بنجاح !";
           document.getElementById("message").style.color = "green";
           console.log(user);
           ensureUserDoc(user)

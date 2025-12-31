@@ -54,5 +54,23 @@ export default [
       sourcemap: 'inline'
     },
     plugins: [nodeResolve()]
+  },
+  {
+    input: 'src/submit.js',
+    output: {
+      file: 'dist/submit.js',
+      format: 'iife',
+      sourcemap: 'inline'
+    },
+    plugins: [nodeResolve()]
+  },
+  {
+    input: 'src/admin.js',
+    output: {
+      file: 'dist/admin.js',
+      format: 'iife',
+      sourcemap: 'inline'
+    },
+    plugins: [nodeResolve()]
   }
 ];

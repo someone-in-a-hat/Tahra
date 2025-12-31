@@ -54,17 +54,17 @@ async function loadQuickFacts(customQuery) {
 
     // Render
     facts.forEach(fact => {
-        const dateStr = fact.date?.toDate().toLocaleDateString() || "غير محدد";
+        const dateStr = fact.date?.toDate().toLocaleDateString('ar-EG') || "غير محدد";
         factsContainer.innerHTML += `
             <div class="fact-card">
                 <img src="${fact.imageURL || 'placeholder.png'}" alt="icon">
                 <div class="fact-content">
                     <h2><strong>الادعاء:</strong> ${fact.claim}</h2>
                     <p class="accuracy"><strong>الدقة:</strong> ${fact.accuracy}</p>
-                    <h2><strong>التصحيح:</strong> ${fact.correction}</h2>
-                    <p><strong>المصدر:</strong> <a href="${fact.source}" target="_blank">${fact.source}</a></p>
-                    <p><strong>التصنيف:</strong> ${fact.tag || 'عام'}</p>
-                    <p><strong>التاريخ:</strong> ${dateStr}</p>
+                    <h3><strong>التصحيح:</strong> ${fact.correction}</h3>
+                    <p class="source"><strong>المصدر:</strong> <a href="${fact.source}" target="_blank">${fact.source}</a></p>
+                    <p class="tag"><strong>التصنيف:</strong> ${fact.tag || 'عام'}</p>
+                    <p class><strong>التاريخ:</strong> ${dateStr}</p>
                 </div>
             </div>
         `;
@@ -104,17 +104,17 @@ async function searchFacts() {
 
     factsContainer.innerHTML = "";
     filtered.slice(0, PAGE_SIZE).forEach(fact => {
-        const dateStr = fact.date?.toDate().toLocaleDateString() || "غير محدد";
+        const dateStr = fact.date?.toDate().toLocaleDateString('ar-EG') || "غير محدد";
         factsContainer.innerHTML += `
             <div class="fact-card">
                 <img src="${fact.imageURL || 'placeholder.png'}" alt="icon">
                 <div class="fact-content">
-                    <p><strong>الادعاء:</strong> ${fact.claim}</p>
+                    <h2><strong>الادعاء:</strong> ${fact.claim}</h2>
                     <p class="accuracy"><strong>الدقة:</strong> ${fact.accuracy}</p>
-                    <p><strong>التصحيح:</strong> ${fact.correction}</p>
-                    <p><strong>المصدر:</strong> <a href="${fact.source}" target="_blank">${fact.source}</a></p>
-                    <p><strong>التصنيف:</strong> ${fact.tag || 'عام'}</p>
-                    <p><strong>التاريخ:</strong> ${dateStr}</p>
+                    <h3><strong>التصحيح:</strong> ${fact.correction}</h3>
+                    <p class="source"><strong>المصدر:</strong> <a href="${fact.source}" target="_blank">${fact.source}</a></p>
+                    <p class="tag"><strong>التصنيف:</strong> ${fact.tag || 'عام'}</p>
+                    <p class><strong>التاريخ:</strong> ${dateStr}</p>
                 </div>
             </div>
         `;

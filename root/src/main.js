@@ -31,7 +31,11 @@ onAuthStateChanged(auth, async (user) => {
     if (snap.exists() && snap.data().displayName) {
       nameEl.textContent = "مرحبا " + snap.data().displayName;
     }
-    if (user.photoURL) {
+    if (snap.data().photoBase64) {
+      avatarEl.src = snap.data().photoBase64;
+      avatarEl.style.display = "block";
+    }
+    else if (user.photoURL) {
       avatarEl.src = user.photoURL;
       avatarEl.style.display = "block";
     }
@@ -45,3 +49,18 @@ onAuthStateChanged(auth, async (user) => {
 avatarEl.addEventListener("click", () => {
     window.location.href = `profile.html?id=${auth.currentUser.uid}`;
   });
+
+  const nav = document.querySelector(".sitenav");
+
+onAuthStateChanged(auth, (user) => {
+    const existing = document.getElementById("profileLink");
+    if (existing) existing.remove();
+
+    if (user) {
+        const profileLink = document.createElement("a");
+        profileLink.href = `profile.html?id=${user.uid}`;
+        profileLink.id = "profileLink";
+        profileLink.textContent = "الملف الشخصي";
+        nav.appendChild(profileLink);
+    }
+});

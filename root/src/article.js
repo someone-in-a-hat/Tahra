@@ -41,7 +41,7 @@ async function loadArticle() {
     const date = article.date.toDate();
 
     document.getElementById("title").textContent = article.title;
-    document.getElementById("date").textContent = date.toLocaleDateString();
+    document.getElementById("date").textContent = date.toLocaleDateString('ar-EG');
     document.getElementById("content").textContent = article.content;
     const sourcesList = document.getElementById("sources");
     sourcesList.innerHTML = "";

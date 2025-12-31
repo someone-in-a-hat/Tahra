@@ -38,6 +38,7 @@ h2 {
     font-family: "Alexandria";
     color: #ff4d4d;
     font-size: 28px;
+    text-align: center;
 }
 
 body {
@@ -107,15 +108,14 @@ body {
     flex-direction: column;
 }
 
-#quickFacts .fact-card .fact-content p {
-    color: #e0e0e0;
-    font-size: 18px;
-    margin: 4px 0;
+.fact-content .accuracy {
+    font-weight: bold;
+    color: #ff9900;
 }
 
-#quickFacts .fact-card .fact-content .accuracy {
-    font-weight: bold;
-    color: #f0ff24;
+#quickFacts .fact-card .fact-content p {
+    font-size: 18px;
+    margin: 4px 0;
 }
 
 .search-container{
@@ -165,4 +165,44 @@ button:hover:not(:disabled) {
 button:disabled {
     background-color: #555;
     cursor: not-allowed;
+}
+
+.fact-content h2, .fact-content h3, .fact-content p {
+    color: #e0e0e0;
+    font-family: "Alexandria";
+    margin: 5px 0;
+}
+
+.fact-content h2 strong {
+    color:#ff4d4d;
+}
+.fact-content h3 strong, .fact-content p strong {
+    color: #66ff66;
+}
+
+.fact-content a {
+    color: #66ff66;
+    text-decoration: underline;
+}
+
+.fact-content a:hover {
+    color: #99ff99;
+    text-decoration: none;
+}
+
+.fact-content .tag {
+    font-style: italic;
+    color: #e0e0e0;
+}
+
+.fact-content .date {
+    font-size: 14px;
+    color: #a5a5a5;
+}
+
+.centered {
+        display: block;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
 }

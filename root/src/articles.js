@@ -59,7 +59,7 @@ const PAGE_SIZE = 10;
     snapshot.forEach(doc => {
         const article = doc.data();
         const date = article.date.toDate();
-        const formattedDate = date.toLocaleDateString();
+        const formattedDate = date.toLocaleDateString('ar-EG');
         console.log(article.author_id)
         document.getElementById("articles").innerHTML += `
             <div class="article-card">
